@@ -1,0 +1,228 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: rgb(26, 26, 26);
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#app {
+  outline: none;
+  background: black;
+  width: 640px;
+  height: 480px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#app .ui {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#app .ui .fps {
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#app .ui .main-menu .title {
+  margin-top: 12px;
+  width: 100%;
+  height: 40px;
+  font-size: 40px;
+  color: red;
+  text-align: center;
+}
+
+#app .ui .main-menu .title span:nth-child(2) {
+  color: lime;
+}
+
+#app .ui .main-menu .subtitle {
+  color: yellow;
+  font-size: 25px;
+  display: inline-block;
+  transform: translateX(320px);
+}
+
+#app .ui .main-menu .control-info {
+  color: white;
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: -20px;
+  font-weight: bold;
+  padding-left: 200px;
+}
+
+#app .ui .main-menu .control-info > span {
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+}
+
+#app .ui .main-menu .list {
+  margin: 40px;
+  width: 560px;
+  font-size: 22px;
+}
+
+#app .ui .main-menu .list .player {
+  height: 35px;
+}
+#app .ui .main-menu .list .player.active .color {
+  opacity: 1;
+}
+#app .ui .main-menu:not(.choice) .list .player:hover .color {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#app .ui .main-menu .list .player > div {
+  display: inline-block;
+}
+
+#app .ui .main-menu .list .player .counter {
+  width: 30px;
+}
+
+#app .ui .main-menu .list .player .color {
+  width: 120px;
+  opacity: 0.4;
+}
+
+#app .ui .main-menu .list .player .leftKey {
+  width: 100px;
+  text-align: center;
+}
+
+#app .ui .main-menu .list .player .rightKey {
+  width: 100px;
+  text-align: center;
+}
+
+#app .ui .main-menu .list .player .leftKey.active::before,
+#app .ui .main-menu .list .player .rightKey.active::before {
+  width: 80px;
+  text-align: center;
+  display: inline-block;
+  content: 'Press desired left key';
+  color: white;
+  border: 2px solid white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 1px;
+  position: absolute;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+#app .ui .main-menu .list .player .rightKey.active::before {
+  content: 'Press desired right key';
+}
+
+#app .ui .main-menu .start {
+  color: yellow;
+  position: absolute;
+  font-size: 30px;
+  border: 1px solid yellow;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  padding: 0 12px 0px 12px;
+  transition: all 0.4s ease-in;
+}
+
+#app .ui .main-menu:not(.choice) .start:hover {
+  box-shadow: 0 0 10px 2px yellow;
+  background: yellow;
+  color: black;
+  cursor: pointer;
+}
+
+#app .ui .ingame {
+  position: absolute;
+  width: 150px;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+#app .ui .ingame .goalInfo {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#app .ui .ingame .goalInfo > p {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+#app .ui .ingame .goalInfo > div {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+#app .ui .ingame .goalInfo > span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#app .ui .ingame .navInfo {
+  color: white;
+  position: absolute;
+  bottom: 22px;
+  font-size: 22px;
+  font-weight: bold;
+  width: 150px;
+  text-align: center;
+}
+
+#app .ui .ingame .tableScore {
+  margin-top: 10px;
+  color: white;
+}
+
+#app .ui .ingame .tableScore .user {
+  width: 120px;
+  margin: 8px;
+}
+#app .ui .ingame .tableScore .user .name {
+  display: inline-block;
+}
+#app .ui .ingame .tableScore .user .score {
+  float: right;
+}
+
+#app .ui.isGame .main-menu {
+  display: none;
+}
+#app .ui .ingame {
+  display: none;
+}
+#app .ui.isGame .ingame {
+  display: block;
+}

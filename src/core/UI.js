@@ -2,7 +2,7 @@ const Renderer = require('./Renderer.js');
 const User = require('./User');
 
 const EventEmitter = require('../helpers/EventEmitter');
-const InputController = require('../helpers/InputController');
+const InputController = require('../helpers/inputController');
 
 class UI extends EventEmitter {
   /**

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run build && node .",
     "watch": "watchify src/index.js -o dist/bundle.js",
-    "build": "browserify src/index.js -t [babelify] | uglifyjs > dist/bundle.js"
+    "build": "node build.js"
   },
   "keywords": [],
   "author": "akcyp",

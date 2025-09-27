@@ -11,6 +11,8 @@ if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
 }
 
+fs.cpSync('style.css', path.join(outputDir, 'style.css'));
+
 const b = browserify(inputFile).transform('babelify');
 
 b.bundle((err, buf) => {
